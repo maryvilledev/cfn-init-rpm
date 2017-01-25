@@ -8,7 +8,7 @@ We are using Bintray to host the RPM repository for us. To install the yum repo,
 
 ```
 yum -y install epel-release
-curl -o bintray-maryvilledev-cfn-init.repo https://bintray.com/maryvilledev/cfn-init/rpm
+curl -L -o /etc/yum.repos.d/cloudformation-helper-scripts.repo https://bintray.com/maryvilledev/cloudformation-helper-scripts/rpm
 yum -y install aws-cfn-bootstrap
 ```
 
