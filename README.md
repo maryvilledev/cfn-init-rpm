@@ -5,8 +5,8 @@ This repo builds a traditional RPM from the AWS Cloudformation bootstrap [tools]
 We are using Bintray to host the RPM repository for us. To install the yum repo, run the following as root:
 
 ```
-yum -y install wget epel-release
-wget https://bintray.com/maryvilledev/cfn-init/rpm -O bintray-maryvilledev-cfn-init.repo
+yum -y install epel-release
+curl -o bintray-maryvilledev-cfn-init.repo https://bintray.com/maryvilledev/cfn-init/rpm
 yum -y install aws-cfn-bootstrap
 ```
 
