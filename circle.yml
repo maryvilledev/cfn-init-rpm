@@ -1,0 +1,12 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker pull centos:7
+    - docker build -t rpmbuilder .
+
+test:
+  override:
+    - docker run --rm -v $CIRCLE_ARTIFACTS:/output rpmbuilder
